@@ -132,7 +132,7 @@ export function EditorForm({ cursos, profesores, asignaturas, salas, bloques, ho
               <select required className="w-full border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-indigo-500 transition-all outline-none bg-gray-50/50"
                 value={formData.asignatura_id} onChange={e => setFormData({ ...formData, asignatura_id: e.target.value })}>
                 <option value="">Selecciona asignatura</option>
-                {asignaturas.map(a => <option key={a.id} value={a.id}>{a.nombre}</option>)}
+                {[...asignaturas].sort((a, b) => a.nombre.localeCompare(b.nombre)).map(a => <option key={a.id} value={a.id}>{a.nombre}</option>)}
               </select>
             </div>
             <div>
@@ -140,7 +140,7 @@ export function EditorForm({ cursos, profesores, asignaturas, salas, bloques, ho
               <select required className="w-full border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-indigo-500 transition-all outline-none bg-gray-50/50"
                 value={formData.profesor_id} onChange={e => setFormData({ ...formData, profesor_id: e.target.value })}>
                 <option value="">Selecciona profesor</option>
-                {profesores.map(p => <option key={p.id} value={p.id}>{p.nombre}</option>)}
+                {[...profesores].sort((a, b) => a.nombre.localeCompare(b.nombre)).map(p => <option key={p.id} value={p.id}>{p.nombre}</option>)}
               </select>
             </div>
           </div>
@@ -159,7 +159,7 @@ export function EditorForm({ cursos, profesores, asignaturas, salas, bloques, ho
               <select required className="w-full border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-indigo-500 transition-all outline-none bg-gray-50/50"
                 value={formData.bloque_id} onChange={e => setFormData({ ...formData, bloque_id: e.target.value })}>
                 <option value="">Selecciona horario</option>
-                {bloques.map(b => <option key={b.id} value={b.id}>{b.hora_inicio} - {b.hora_fin}</option>)}
+                {[...bloques].sort((a, b) => a.hora_inicio.localeCompare(b.hora_inicio)).map(b => <option key={b.id} value={b.id}>{b.hora_inicio} - {b.hora_fin}</option>)}
               </select>
             </div>
             <div>
@@ -167,7 +167,7 @@ export function EditorForm({ cursos, profesores, asignaturas, salas, bloques, ho
               <select required className="w-full border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-indigo-500 transition-all outline-none bg-gray-50/50"
                 value={formData.sala_id} onChange={e => setFormData({ ...formData, sala_id: e.target.value })}>
                 <option value="">Selecciona sala</option>
-                {salas.map(s => {
+                {[...salas].sort((a, b) => a.nombre.localeCompare(b.nombre, undefined, { numeric: true })).map(s => {
                   const available = availableRooms.some(ar => ar.id === s.id);
                   return (
                     <option key={s.id} value={s.id} className={available ? "text-emerald-600 font-bold" : "text-gray-400"}>
