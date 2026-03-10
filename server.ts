@@ -82,17 +82,17 @@ async function startServer() {
 
     // Validations
     try {
-      // Conflicto de profesor (excluyendo misma asignatura/sala/bloque = clase compartida)
+      // Conflicto de profesor (excluyendo clases compartidas en cursos DISTINTOS)
       const [profesorConflict] = await db.query<RowDataPacket[]>(
-        "SELECT id FROM horarios WHERE profesor_id = ? AND dia_semana = ? AND bloque_id = ? AND asignatura_id != ?",
-        [profesor_id, dia_semana, bloque_id, asignatura_id]
+        "SELECT id FROM horarios WHERE profesor_id = ? AND dia_semana = ? AND bloque_id = ? AND (asignatura_id != ? OR curso_id = ?)",
+        [profesor_id, dia_semana, bloque_id, asignatura_id, curso_id]
       );
-      if (profesorConflict.length > 0) return res.status(400).json({ error: "Conflicto de profesor: El profesor ya tiene una clase distinta en este horario." });
+      if (profesorConflict.length > 0) return res.status(400).json({ error: "Conflicto de profesor: El profesor ya tiene una clase en este horario." });
 
-      // Conflicto de sala (excluyendo misma asignatura/profesor/bloque = clase compartida)
+      // Conflicto de sala (excluyendo clases compartidas en cursos DISTINTOS)
       const [salaConflict] = await db.query<RowDataPacket[]>(
-        "SELECT id FROM horarios WHERE sala_id = ? AND dia_semana = ? AND bloque_id = ? AND (asignatura_id != ? OR profesor_id != ?)",
-        [sala_id, dia_semana, bloque_id, asignatura_id, profesor_id]
+        "SELECT id FROM horarios WHERE sala_id = ? AND dia_semana = ? AND bloque_id = ? AND ((asignatura_id != ? OR profesor_id != ?) OR curso_id = ?)",
+        [sala_id, dia_semana, bloque_id, asignatura_id, profesor_id, curso_id]
       );
       if (salaConflict.length > 0) return res.status(400).json({ error: "Conflicto de sala: La sala ya está ocupada por otra clase en este horario." });
 
@@ -120,17 +120,17 @@ async function startServer() {
     const { curso_id, asignatura_id, profesor_id, sala_id, dia_semana, bloque_id } = req.body;
 
     try {
-      // Conflicto de profesor (excluyendo el actual y clases compartidas)
+      // Conflicto de profesor (excluyendo el actual y clases compartidas en otros cursos)
       const [profesorConflict] = await db.query<RowDataPacket[]>(
-        "SELECT id FROM horarios WHERE profesor_id = ? AND dia_semana = ? AND bloque_id = ? AND id != ? AND asignatura_id != ?",
-        [profesor_id, dia_semana, bloque_id, id, asignatura_id]
+        "SELECT id FROM horarios WHERE profesor_id = ? AND dia_semana = ? AND bloque_id = ? AND id != ? AND (asignatura_id != ? OR curso_id = ?)",
+        [profesor_id, dia_semana, bloque_id, id, asignatura_id, curso_id]
       );
-      if (profesorConflict.length > 0) return res.status(400).json({ error: "Conflicto de profesor: El profesor ya tiene una clase distinta en este horario." });
+      if (profesorConflict.length > 0) return res.status(400).json({ error: "Conflicto de profesor: El profesor ya tiene una clase en este horario." });
 
-      // Conflicto de sala (excluyendo el actual y clases compartidas)
+      // Conflicto de sala (excluyendo el actual y clases compartidas en otros cursos)
       const [salaConflict] = await db.query<RowDataPacket[]>(
-        "SELECT id FROM horarios WHERE sala_id = ? AND dia_semana = ? AND bloque_id = ? AND id != ? AND (asignatura_id != ? OR profesor_id != ?)",
-        [sala_id, dia_semana, bloque_id, id, asignatura_id, profesor_id]
+        "SELECT id FROM horarios WHERE sala_id = ? AND dia_semana = ? AND bloque_id = ? AND id != ? AND ((asignatura_id != ? OR profesor_id != ?) OR curso_id = ?)",
+        [sala_id, dia_semana, bloque_id, id, asignatura_id, profesor_id, curso_id]
       );
       if (salaConflict.length > 0) return res.status(400).json({ error: "Conflicto de sala: La sala ya está ocupada por otra clase en este horario." });
 

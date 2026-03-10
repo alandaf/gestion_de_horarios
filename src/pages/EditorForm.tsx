@@ -69,11 +69,12 @@ export function EditorForm({ cursos, profesores, asignaturas, salas, bloques, ho
       const sameTime = h.dia_semana === dia_semana && h.bloque_id === Number(bloque_id);
       if (!sameTime) return;
 
-      // Shared class: Same Professor + Same Subject + Same Room + Same Time = ALLOWED
+      // Shared class: Same Professor + Same Subject + Same Room + Same Time + DIFFERENT Course = ALLOWED
       const isSharedClass = 
         h.profesor_id === Number(profesor_id) && 
         h.asignatura_id === Number(asignatura_id) && 
-        h.sala_id === Number(sala_id);
+        h.sala_id === Number(sala_id) &&
+        h.curso_id !== Number(curso_id);
 
       if (isSharedClass) return;
 
@@ -98,8 +99,8 @@ export function EditorForm({ cursos, profesores, asignaturas, salas, bloques, ho
       h.bloque_id === Number(formData.bloque_id) && 
       h.sala_id === sala.id &&
       (initialData ? h.id !== initialData.id : true) &&
-      // Shared class exception
-      !(h.profesor_id === Number(formData.profesor_id) && h.asignatura_id === Number(formData.asignatura_id))
+      // Shared class exception: Allowed if it's the same Prof + Subj but for a DIFFERENT course
+      !(h.profesor_id === Number(formData.profesor_id) && h.asignatura_id === Number(formData.asignatura_id) && h.curso_id !== Number(formData.curso_id))
     );
   });
 
