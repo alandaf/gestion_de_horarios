@@ -1,0 +1,1118 @@
+[
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "LUNES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Legislación Marítima Nacional",
+    "profesor": "Rodolfo Estay",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "MARTES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Matemáticas General",
+    "profesor": "Ernesto Godoy",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Química Industrial",
+    "profesor": "Lorena Pizarro",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "JUEVES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Talleres y Fabricación",
+    "profesor": "Sixto Vargas",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "VIERNES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Dibujo Técnico",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "SÁBADO",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Física General",
+    "profesor": "M.Plaza",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "LUNES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Legislación Marítima Nacional",
+    "profesor": "Rodolfo Estay",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "MARTES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Matemáticas General",
+    "profesor": "Ernesto Godoy",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Química Industrial",
+    "profesor": "Lorena Pizarro",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "JUEVES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Talleres y Fabricación",
+    "profesor": "Sixto Vargas",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "VIERNES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Dibujo Técnico",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "SÁBADO",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Física General",
+    "profesor": "M.Plaza",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "LUNES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Talleres y Fabricación",
+    "profesor": "Sixto Vargas",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "MARTES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Matemáticas General",
+    "profesor": "Ernesto Godoy",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Química Industrial",
+    "profesor": "Lorena Pizarro",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "SÁBADO",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Física General",
+    "profesor": "M.Plaza",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "LUNES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Talleres y Fabricación",
+    "profesor": "Sixto Vargas",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "MARTES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Inglés Técnico",
+    "profesor": "Karem Escudero",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "JUEVES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Deberes de la Guardia",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "VIERNES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Ingles Tecnico",
+    "profesor": "Karem Escudero",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "SÁBADO",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Física General",
+    "profesor": "M.Plaza",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "MARTES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Inglés Técnico",
+    "profesor": "Karem Escudero",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "JUEVES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Deberes de la Guardia",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 TGM a M2do",
+    "dia": "VIERNES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Ingles Tecnico",
+    "profesor": "Karem Escudero",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "LUNES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Legislación Marítima Nacional",
+    "profesor": "Legislación Marítima Nacional",
+    "sala": "Rodolfo Estay"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Química Industrial",
+    "profesor": "Química Industrial",
+    "sala": "Lorena Pizarro"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "JUEVES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Talleres y Fabricación",
+    "profesor": "Talleres y Fabricación",
+    "sala": "Sixto Vargas"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "VIERNES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Dibujo Técnico",
+    "profesor": "Dibujo Técnico",
+    "sala": "Jaime Vizcarra"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "SÁBADO",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Física General",
+    "profesor": "Física General",
+    "sala": "M.Plaza"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "LUNES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Legislación Marítima Nacional",
+    "profesor": "Legislación Marítima Nacional",
+    "sala": "Rodolfo Estay"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "MARTES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Orient. Profesional",
+    "profesor": "Orient. Profesional",
+    "sala": "Manuel Moreno"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Química Industrial",
+    "profesor": "Química Industrial",
+    "sala": "Lorena Pizarro"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "JUEVES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Talleres y Fabricación",
+    "profesor": "Talleres y Fabricación",
+    "sala": "Sixto Vargas"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "VIERNES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Dibujo Técnico",
+    "profesor": "Dibujo Técnico",
+    "sala": "Jaime Vizcarra"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "SÁBADO",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Física General",
+    "profesor": "Física General",
+    "sala": "M.Plaza"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "LUNES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "SALA 106",
+    "profesor": "Familiarización Marítima",
+    "sala": "Familiarización Marítima"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "SALA 105",
+    "profesor": "Química Industrial",
+    "sala": "Química Industrial"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "JUEVES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "SALA 105",
+    "profesor": "Talleres y Fabricación",
+    "sala": "Talleres y Fabricación"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "VIERNES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "SALA 105",
+    "profesor": "Dibujo Técnico",
+    "sala": "Dibujo Técnico"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "SÁBADO",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "SALA 106",
+    "profesor": "Física General",
+    "sala": "Física General"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "LUNES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Talleres y Fabricación",
+    "profesor": "Sixto Vargas",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Química Industrial",
+    "profesor": "Lorena Pizarro",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "SÁBADO",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Física General",
+    "profesor": "M.Plaza",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "LUNES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Talleres y Fabricación",
+    "profesor": "Sixto Vargas",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "MARTES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Inglés Técnico",
+    "profesor": "Karem Escudero",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Náutica",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "JUEVES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Deberes de la Guardia",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "VIERNES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Ingles tecnico",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "SÁBADO",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Física General",
+    "profesor": "M.Plaza",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "MARTES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "SALA 105",
+    "profesor": "Inglés Técnico",
+    "sala": "Karem Escudero"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "SALA 105",
+    "profesor": "Náutica",
+    "sala": "Jaime Vizcarra"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "JUEVES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "SALA 105",
+    "profesor": "Deberes de la Guardia",
+    "sala": "Jaime Vizcarra"
+  },
+  {
+    "curso": "Nivel 1 Elec. a M2do",
+    "dia": "VIERNES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "SALA 105",
+    "profesor": "Ingles Tecnico",
+    "sala": "Jaime Vizcarra"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "LUNES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Matemática Aplicada",
+    "profesor": "Ernesto Godoy",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "MARTES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Equip Sistemas Aux",
+    "profesor": "German Kreisel",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Electronica",
+    "profesor": "R. Toro",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "JUEVES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Ingles Operation Máquinas",
+    "profesor": "K. Scudery",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "VIERNES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Electronica",
+    "profesor": "R. Toro",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "LUNES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Matemática Aplicada",
+    "profesor": "Ernesto Godoy",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "MARTES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Equip Sistemas Aux",
+    "profesor": "German Kreisel",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Mecánica",
+    "profesor": "M.Plaza",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "JUEVES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Ingles Operation Máquinas",
+    "profesor": "K. Scudery",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "VIERNES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Generación y Distribución Eléct.",
+    "profesor": "R. Toro",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "LUNES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Motores Diesel",
+    "profesor": "Jaime Vizcarra",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "MARTES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Motores Diesel",
+    "profesor": "Jaime Vizcarra",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Mecánica",
+    "profesor": "M.Plaza",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "VIERNES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Generación y Distribución Eléct.",
+    "profesor": "R. Toro",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "LUNES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Motores Diesel",
+    "profesor": "Jaime Vizcarra",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "MARTES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Motores Diesel",
+    "profesor": "Jaime Vizcarra",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Mecánica",
+    "profesor": "M.Plaza",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 a ING TERCERO",
+    "dia": "VIERNES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Generación y Distribución Eléct.",
+    "profesor": "R. Toro",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "LUNES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Legislation Marittima Nacional",
+    "profesor": "Rodolfo Estay",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "MARTES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Equip Sistemas Aux",
+    "profesor": "German Kreisel",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Electrónica",
+    "profesor": "R. Toro",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "JUEVES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Ingles Operation Máquinas",
+    "profesor": "K. Escudero",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "VIERNES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Electrónica",
+    "profesor": "R. Toro",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "LUNES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Legislación Marítima Nacional",
+    "profesor": "Rodolfo Estay",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "MARTES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Equipo Sistemas Aux",
+    "profesor": "German Kreisel",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Electrónica",
+    "profesor": "R. Toro",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "JUEVES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Inglés Operación Máquinas",
+    "profesor": "K. Escudero",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "VIERNES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Electrónica",
+    "profesor": "R. Toro",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "LUNES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Familiarización Marítima",
+    "profesor": "Jaime Vizcarra",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "MARTES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Equip Sistemas Aux",
+    "profesor": "German Kreisel",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "JUEVES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Inglés Operación Máquinas",
+    "profesor": "K. Escudero",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "VIERNES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Generación y Distribución Eléct.",
+    "profesor": "R. Toro",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "MARTES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Equipo Sistemas Aux",
+    "profesor": "German Kreisel",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "JUEVES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Inglés Operación Máquinas",
+    "profesor": "K. Escudero",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "VIERNES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Generación y Distribución Eléct.",
+    "profesor": "R. Toro",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "LUNES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Motores Diesel",
+    "profesor": "Jaime Vizcarra",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "MARTES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Motores Diesel",
+    "profesor": "Jaime Vizcarra",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Náutica",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "JUEVES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Deberes de Guardia",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "VIERNES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Generación y Distribución Eléct.",
+    "profesor": "R. Toro",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "LUNES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Motores Diesel",
+    "profesor": "Jaime Vizcarra",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "MARTES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Motores Diesel",
+    "profesor": "Jaime Vizcarra",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Náutica",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "JUEVES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Deberes de Guardia",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 2 de ING Mecan.",
+    "dia": "VIERNES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Generación y Distribución Eléct.",
+    "profesor": "R. Toro",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "LUNES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Legislación Marítima Nacional",
+    "profesor": "Rodolfo Estay",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "MARTES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Equip Sistemas Aux",
+    "profesor": "German Kreisel",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Química Industrial",
+    "profesor": "Lorena Pizarro",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "JUEVES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Ingles Operation Máquinas",
+    "profesor": "K. Escudero",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "VIERNES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Dibujo Técnico",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "LUNES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Legislación Marítima Nacional",
+    "profesor": "Rodolfo Estay",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "MARTES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Equipo Sistemas Aux",
+    "profesor": "German Kreisel",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Química Industrial",
+    "profesor": "Lorena Pizarro",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "JUEVES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Inglés Operación Máquinas",
+    "profesor": "K. Escudero",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "VIERNES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Dibujo Técnico",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "LUNES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Familiarización Marítima",
+    "profesor": "Jaime Vizcarra",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "MARTES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Equip Sistemas Aux",
+    "profesor": "German Kreisel",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Química Industrial",
+    "profesor": "Lorena Pizarro",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "JUEVES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Inglés Operación Máquinas",
+    "profesor": "K. Escudero",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "VIERNES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Dibujo Técnico",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "MARTES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Equipo Sistemas Aux",
+    "profesor": "German Kreisel",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Química Industrial",
+    "profesor": "Lorena Pizarro",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "JUEVES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Inglés Operación Máquinas",
+    "profesor": "K. Escudero",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "LUNES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Motores Diesel",
+    "profesor": "Jaime Vizcarra",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "MARTES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Motores Diesel",
+    "profesor": "Jaime Vizcarra",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Náutica",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "JUEVES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Deberes de Guardia",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "LUNES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Motores Diesel",
+    "profesor": "Jaime Vizcarra",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "MARTES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Motores Diesel",
+    "profesor": "Jaime Vizcarra",
+    "sala": "103"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Náutica",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 2 de ING Elect.",
+    "dia": "JUEVES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Deberes de Guardia",
+    "profesor": "Jaime Vizcarra",
+    "sala": "105"
+  }
+]

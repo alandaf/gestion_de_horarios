@@ -1,0 +1,515 @@
+[
+  {
+    "curso": "Nivel 1",
+    "dia": "LUNES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Nav. Costera I",
+    "profesor": "Enrique Coloma",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "MARTES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Legislación Marítima NacIonal",
+    "profesor": "Manuel Moreno",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "JUEVES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Equipos de Puente",
+    "profesor": "Carlos Beth",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "VIERNES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Meteorología",
+    "profesor": "G. Vargas Castillo",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "SÁBADO",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Física General",
+    "profesor": "M. Plaza",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "LUNES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Nav. Costera I",
+    "profesor": "Enrique Coloma",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "MARTES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Legislación Marítima NacIonal",
+    "profesor": "Manuel Moreno",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "JUEVES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Equipos de Puente",
+    "profesor": "Carlos Beth",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "VIERNES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Meteorología",
+    "profesor": "G. Vargas Castillo",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "SÁBADO",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Física General",
+    "profesor": "M. Plaza",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "LUNES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Inglés Maniobra",
+    "profesor": "Karem Escudero",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "MARTES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Guardia de Nav",
+    "profesor": "D. Apostolovski",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Matemática general",
+    "profesor": "Ernesto Godoy",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "JUEVES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Equipos de Puente",
+    "profesor": "Carlos Beth",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "VIERNES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Meteorología",
+    "profesor": "G. Vargas Castillo",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "SÁBADO",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Física General",
+    "profesor": "M. Plaza",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "LUNES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Inglés Maniobra",
+    "profesor": "Karem Escudero",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "MARTES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Guardia de Nav",
+    "profesor": "D. Apostolovski",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Matemática general",
+    "profesor": "Ernesto Godoy",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "JUEVES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Nav. Costera I",
+    "profesor": "Enrique Coloma",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "VIERNES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Familiarización Marítima",
+    "profesor": "Manuel Moreno",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "SÁBADO",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Física General",
+    "profesor": "M. Plaza",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "LUNES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Inglés Maniobra",
+    "profesor": "Karem Escudero",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "MARTES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Guardia de Nav",
+    "profesor": "D. Apostolovski",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Matemática general",
+    "profesor": "Ernesto Godoy",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "JUEVES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Nav. Costera I",
+    "profesor": "Enrique Coloma",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "SÁBADO",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Física General",
+    "profesor": "M. Plaza",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "LUNES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Inglés Maniobra",
+    "profesor": "Karem Escudero",
+    "sala": "105"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Matemática general",
+    "profesor": "Ernesto Godoy",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 1",
+    "dia": "JUEVES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Nav. Costera I",
+    "profesor": "Enrique Coloma",
+    "sala": "106"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "LUNES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Carga y Estiba II",
+    "profesor": "D. Apostolovski",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "MARTES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Loxodrómica y ortodrómica",
+    "profesor": "Enrique  Coloma",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Inglés Puente",
+    "profesor": "S. Murphy",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "JUEVES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Loxodrómica y ortodrómica",
+    "profesor": "Enrique  Coloma",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "VIERNES",
+    "hora_inicio": "14:15",
+    "hora_fin": "15:00",
+    "asignatura": "Carga y Estiba II",
+    "profesor": "D. Apostolovski",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "LUNES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Maniobras",
+    "profesor": "Carlos Beth",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "MARTES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Loxodrómica y ortodrómica",
+    "profesor": "Enrique  Coloma",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Inglés Puente",
+    "profesor": "S. Murphy",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "JUEVES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Loxodrómica y ortodrómica",
+    "profesor": "Enrique  Coloma",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "VIERNES",
+    "hora_inicio": "15:00",
+    "hora_fin": "15:45",
+    "asignatura": "Carga y Estiba II",
+    "profesor": "D. Apostolovski",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "LUNES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Maniobras",
+    "profesor": "Carlos Beth",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "MARTES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Estabilidad con averías",
+    "profesor": "G. Vargas Castillo",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Inglés Puente",
+    "profesor": "S. Murphy",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "JUEVES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Física Aplicada",
+    "profesor": "M.Plaza Bombal",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "VIERNES",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:45",
+    "asignatura": "Matemáticas Aplicadas",
+    "profesor": "Ernesto Godoy",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "LUNES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Maniobras",
+    "profesor": "Carlos Beth",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "MARTES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Estabilidad con averías",
+    "profesor": "G. Vargas Castillo",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "MIÉRCOLES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Inglés Puente",
+    "profesor": "S. Murphy",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "JUEVES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Física Aplicada",
+    "profesor": "M.Plaza Bombal",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "VIERNES",
+    "hora_inicio": "16:45",
+    "hora_fin": "17:30",
+    "asignatura": "Matemáticas Aplicadas",
+    "profesor": "Ernesto Godoy",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "LUNES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Maniobras",
+    "profesor": "Carlos Beth",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "MARTES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Estabilidad con averías",
+    "profesor": "G. Vargas Castillo",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "JUEVES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Física Aplicada",
+    "profesor": "M.Plaza Bombal",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "VIERNES",
+    "hora_inicio": "17:45",
+    "hora_fin": "18:30",
+    "asignatura": "Matemáticas Aplicadas",
+    "profesor": "Ernesto Godoy",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "MARTES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Estabilidad con averías",
+    "profesor": "G. Vargas Castillo",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "JUEVES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Física Aplicada",
+    "profesor": "M.Plaza Bombal",
+    "sala": "202"
+  },
+  {
+    "curso": "Nivel 2 puente 2024",
+    "dia": "VIERNES",
+    "hora_inicio": "18:30",
+    "hora_fin": "19:15",
+    "asignatura": "Matemáticas Aplicadas",
+    "profesor": "Ernesto Godoy",
+    "sala": "202"
+  }
+]

@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #f8fafc;
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+}
