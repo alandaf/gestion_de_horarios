@@ -166,7 +166,7 @@ async function startServer() {
 
   // Endpoints for dropdowns
   app.get("/api/cursos", async (req: Request, res: Response) => {
-    const [rows] = await db.query("SELECT * FROM cursos");
+    const [rows] = await db.query("SELECT * FROM cursos ORDER BY nombre ASC");
     res.json(rows);
   });
 
@@ -200,7 +200,7 @@ async function startServer() {
   });
 
   app.get("/api/profesores", async (req: Request, res: Response) => {
-    const [rows] = await db.query("SELECT * FROM profesores");
+    const [rows] = await db.query("SELECT * FROM profesores ORDER BY nombre ASC");
     res.json(rows);
   });
 
@@ -232,7 +232,7 @@ async function startServer() {
   });
 
   app.get("/api/asignaturas", async (req: Request, res: Response) => {
-    const [rows] = await db.query("SELECT * FROM asignaturas");
+    const [rows] = await db.query("SELECT * FROM asignaturas ORDER BY nombre ASC");
     res.json(rows);
   });
   app.post("/api/asignaturas", async (req: Request, res: Response) => {
@@ -263,7 +263,7 @@ async function startServer() {
   });
 
   app.get("/api/salas", async (req: Request, res: Response) => {
-    const [rows] = await db.query("SELECT * FROM salas");
+    const [rows] = await db.query("SELECT * FROM salas ORDER BY nombre ASC");
     res.json(rows);
   });
   app.post("/api/salas", async (req: Request, res: Response) => {
