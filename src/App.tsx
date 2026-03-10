@@ -123,6 +123,7 @@ function App() {
 
   const handleDashboardAction = (id: string) => {
     if (id === 'new') {
+      fetchData();
       setIsEditing(true);
       setEditingData(null);
     } else {
@@ -198,7 +199,7 @@ function App() {
 
           <div className="pt-6 mt-6 border-t border-gray-100">
             <button
-              onClick={() => { setIsEditing(true); setEditingData(null); }}
+              onClick={() => { fetchData(); setIsEditing(true); setEditingData(null); }}
               className={'w-full flex items-center justify-center space-x-2 px-4 py-3 rounded-xl transition-all duration-200 font-semibold ' +
                 (isEditing && !editingData ? 'bg-indigo-600 text-white shadow-md' : 'bg-gray-900 text-white hover:bg-gray-800 hover:shadow-md')}
             >
