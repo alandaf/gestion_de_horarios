@@ -294,7 +294,7 @@ async function startServer() {
   });
 
   app.get("/api/bloques", async (req: Request, res: Response) => {
-    const [rows] = await db.query("SELECT * FROM bloques_horarios");
+    const [rows] = await db.query("SELECT * FROM bloques_horarios ORDER BY hora_inicio ASC");
     res.json(rows);
   });
   app.post("/api/bloques", async (req: Request, res: Response) => {
