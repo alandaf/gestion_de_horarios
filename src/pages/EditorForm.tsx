@@ -124,7 +124,7 @@ export function EditorForm({ cursos, profesores, asignaturas, salas, bloques, ho
               <select required className="w-full border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-indigo-500 transition-all outline-none bg-gray-50/50"
                 value={formData.curso_id} onChange={e => setFormData({ ...formData, curso_id: e.target.value })}>
                 <option value="">Selecciona curso</option>
-                {cursos.map(c => <option key={c.id} value={c.id}>{c.nombre}</option>)}
+                {[...cursos].sort((a, b) => a.nombre.localeCompare(b.nombre)).map(c => <option key={c.id} value={c.id}>{c.nombre}</option>)}
               </select>
             </div>
             <div>
