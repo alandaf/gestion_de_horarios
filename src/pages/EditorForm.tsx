@@ -66,7 +66,8 @@ export function EditorForm({ cursos, profesores, asignaturas, salas, bloques, ho
       // Skip current being edited
       if (initialData && h.id === initialData.id) return;
 
-      const sameTime = h.dia_semana === dia_semana && h.bloque_id === Number(bloque_id);
+      const sameDay = h.dia_semana.trim().toUpperCase() === dia_semana.trim().toUpperCase();
+      const sameTime = sameDay && h.bloque_id === Number(bloque_id);
       if (!sameTime) return;
 
       // Shared class: Same Professor + Same Subject + Same Room + Same Time + DIFFERENT Course = ALLOWED
@@ -95,7 +96,7 @@ export function EditorForm({ cursos, profesores, asignaturas, salas, bloques, ho
   const availableRooms = salas.filter(sala => {
     if (!formData.dia_semana || !formData.bloque_id) return true;
     return !horarios.some(h => 
-      h.dia_semana === formData.dia_semana && 
+      h.dia_semana.trim().toUpperCase() === formData.dia_semana.trim().toUpperCase() && 
       h.bloque_id === Number(formData.bloque_id) && 
       h.sala_id === sala.id &&
       (initialData ? h.id !== initialData.id : true) &&
