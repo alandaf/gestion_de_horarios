@@ -4,17 +4,76 @@ import multer from "multer";
 import * as xlsx from "xlsx";
 import { db } from "./src/db.js";
 import { ResultSetHeader, RowDataPacket } from "mysql2";
+import path from "path";
+import jwt from "jsonwebtoken";
+import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 
 dotenv.config();
+
+const JWT_SECRET = process.env.JWT_SECRET || "academia_sync_secret_key_2024";
 
 async function startServer() {
   const app = express();
   const PORT = process.env.PORT || 3000;
 
   app.use(express.json());
+  app.use(cookieParser());
+
+  // Auth Middleware
+  const authenticateToken = (req: Request, res: Response, next: () => void) => {
+    const token = req.cookies.auth_token;
+    if (!token) return res.status(401).json({ error: "No autenticado" });
+
+    jwt.verify(token, JWT_SECRET, (err: any, user: any) => {
+      if (err) return res.status(403).json({ error: "Token inválido" });
+      (req as any).user = user;
+      next();
+    });
+  };
+
+  const isAdmin = (req: Request, res: Response, next: () => void) => {
+    if ((req as any).user?.role !== 'admin') {
+      return res.status(403).json({ error: "Acceso denegado: Se requiere rol de Administrador" });
+    }
+    next();
+  };
 
   const upload = multer({ storage: multer.memoryStorage() });
+
+  // Auth Routes
+  app.post("/api/auth/login", async (req: Request, res: Response) => {
+    const { usuario, password } = req.body;
+    try {
+      const [rows]: any = await db.query("SELECT * FROM usuarios WHERE usuario = ?", [usuario]);
+      const user = rows[0];
+
+      if (user && user.password === password) { // En producción usar bcrypt
+        const token = jwt.sign({ id: user.id, usuario: user.usuario, role: user.role }, JWT_SECRET, { expiresIn: '24h' });
+        res.cookie('auth_token', token, { httpOnly: true, secure: process.env.NODE_ENV === 'production', maxAge: 24 * 60 * 60 * 1000 });
+        res.json({ success: true, user: { usuario: user.usuario, role: user.role } });
+      } else {
+        res.status(401).json({ error: "Credenciales inválidas" });
+      }
+    } catch (error) {
+      res.status(500).json({ error: "Error en el servidor" });
+    }
+  });
+
+  app.post("/api/auth/logout", (req: Request, res: Response) => {
+    res.clearCookie('auth_token');
+    res.json({ success: true });
+  });
+
+  app.get("/api/auth/me", (req: Request, res: Response) => {
+    const token = req.cookies.auth_token;
+    if (!token) return res.json({ user: null });
+
+    jwt.verify(token, JWT_SECRET, (err: any, user: any) => {
+      if (err) return res.json({ user: null });
+      res.json({ user });
+    });
+  });
 
   // API Routes
   app.get("/api/dashboard", async (req: Request, res: Response) => {
@@ -77,7 +136,7 @@ async function startServer() {
     }
   });
 
-  app.post("/api/horarios", async (req: Request, res: Response): Promise<any> => {
+  app.post("/api/horarios", authenticateToken, async (req: Request, res: Response): Promise<any> => {
     const { curso_id, asignatura_id, profesor_id, sala_id, dia_semana, bloque_id } = req.body;
 
     // Validations
@@ -115,7 +174,7 @@ async function startServer() {
     }
   });
 
-  app.put("/api/horarios/:id", async (req: Request, res: Response): Promise<any> => {
+  app.put("/api/horarios/:id", authenticateToken, async (req: Request, res: Response): Promise<any> => {
     const { id } = req.params;
     const { curso_id, asignatura_id, profesor_id, sala_id, dia_semana, bloque_id } = req.body;
 
@@ -154,7 +213,7 @@ async function startServer() {
     }
   });
 
-  app.delete("/api/horarios/:id", async (req: Request, res: Response) => {
+  app.delete("/api/horarios/:id", authenticateToken, async (req: Request, res: Response) => {
     try {
       await db.query("DELETE FROM horarios WHERE id = ?", [req.params.id]);
       res.json({ success: true });
@@ -170,7 +229,7 @@ async function startServer() {
     res.json(rows);
   });
 
-  app.post("/api/cursos", async (req: Request, res: Response) => {
+  app.post("/api/cursos", authenticateToken, isAdmin, async (req: Request, res: Response) => {
     try {
       const { nombre, carrera_id } = req.body;
       const [info] = await db.query<ResultSetHeader>("INSERT INTO cursos (nombre, carrera_id) VALUES (?, ?)", [nombre, carrera_id || 1]);
@@ -180,7 +239,7 @@ async function startServer() {
     }
   });
 
-  app.put("/api/cursos/:id", async (req: Request, res: Response) => {
+  app.put("/api/cursos/:id", authenticateToken, isAdmin, async (req: Request, res: Response) => {
     try {
       const { nombre } = req.body;
       await db.query("UPDATE cursos SET nombre = ? WHERE id = ?", [nombre, req.params.id]);
@@ -190,7 +249,7 @@ async function startServer() {
     }
   });
 
-  app.delete("/api/cursos/:id", async (req: Request, res: Response) => {
+  app.delete("/api/cursos/:id", authenticateToken, isAdmin, async (req: Request, res: Response) => {
     try {
       await db.query("DELETE FROM cursos WHERE id = ?", [req.params.id]);
       res.json({ success: true });
@@ -204,7 +263,7 @@ async function startServer() {
     res.json(rows);
   });
 
-  app.post("/api/profesores", async (req: Request, res: Response) => {
+  app.post("/api/profesores", authenticateToken, isAdmin, async (req: Request, res: Response) => {
     try {
       const { nombre } = req.body;
       const [info] = await db.query<ResultSetHeader>("INSERT INTO profesores (nombre) VALUES (?)", [nombre]);
@@ -213,7 +272,7 @@ async function startServer() {
       res.status(500).json({ error: "Error al crear profesor" });
     }
   });
-  app.put("/api/profesores/:id", async (req: Request, res: Response) => {
+  app.put("/api/profesores/:id", authenticateToken, isAdmin, async (req: Request, res: Response) => {
     try {
       const { nombre } = req.body;
       await db.query("UPDATE profesores SET nombre = ? WHERE id = ?", [nombre, req.params.id]);
@@ -222,7 +281,7 @@ async function startServer() {
       res.status(500).json({ error: "Error al actualizar profesor" });
     }
   });
-  app.delete("/api/profesores/:id", async (req: Request, res: Response) => {
+  app.delete("/api/profesores/:id", authenticateToken, isAdmin, async (req: Request, res: Response) => {
     try {
       await db.query("DELETE FROM profesores WHERE id = ?", [req.params.id]);
       res.json({ success: true });
@@ -235,7 +294,7 @@ async function startServer() {
     const [rows] = await db.query("SELECT * FROM asignaturas ORDER BY nombre ASC");
     res.json(rows);
   });
-  app.post("/api/asignaturas", async (req: Request, res: Response) => {
+  app.post("/api/asignaturas", authenticateToken, isAdmin, async (req: Request, res: Response) => {
     try {
       const { nombre } = req.body;
       const [info] = await db.query<ResultSetHeader>("INSERT INTO asignaturas (nombre) VALUES (?)", [nombre]);
@@ -244,7 +303,7 @@ async function startServer() {
       res.status(500).json({ error: "Error al crear asignatura" });
     }
   });
-  app.put("/api/asignaturas/:id", async (req: Request, res: Response) => {
+  app.put("/api/asignaturas/:id", authenticateToken, isAdmin, async (req: Request, res: Response) => {
     try {
       const { nombre } = req.body;
       await db.query("UPDATE asignaturas SET nombre = ? WHERE id = ?", [nombre, req.params.id]);
@@ -253,7 +312,7 @@ async function startServer() {
       res.status(500).json({ error: "Error al actualizar asignatura" });
     }
   });
-  app.delete("/api/asignaturas/:id", async (req: Request, res: Response) => {
+  app.delete("/api/asignaturas/:id", authenticateToken, isAdmin, async (req: Request, res: Response) => {
     try {
       await db.query("DELETE FROM asignaturas WHERE id = ?", [req.params.id]);
       res.json({ success: true });
@@ -266,7 +325,7 @@ async function startServer() {
     const [rows] = await db.query("SELECT * FROM salas ORDER BY nombre ASC");
     res.json(rows);
   });
-  app.post("/api/salas", async (req: Request, res: Response) => {
+  app.post("/api/salas", authenticateToken, isAdmin, async (req: Request, res: Response) => {
     try {
       const { nombre } = req.body;
       const [info] = await db.query<ResultSetHeader>("INSERT INTO salas (nombre) VALUES (?)", [nombre]);
@@ -275,7 +334,7 @@ async function startServer() {
       res.status(500).json({ error: "Error al crear sala" });
     }
   });
-  app.put("/api/salas/:id", async (req: Request, res: Response) => {
+  app.put("/api/salas/:id", authenticateToken, isAdmin, async (req: Request, res: Response) => {
     try {
       const { nombre } = req.body;
       await db.query("UPDATE salas SET nombre = ? WHERE id = ?", [nombre, req.params.id]);
@@ -284,7 +343,7 @@ async function startServer() {
       res.status(500).json({ error: "Error al actualizar sala" });
     }
   });
-  app.delete("/api/salas/:id", async (req: Request, res: Response) => {
+  app.delete("/api/salas/:id", authenticateToken, isAdmin, async (req: Request, res: Response) => {
     try {
       await db.query("DELETE FROM salas WHERE id = ?", [req.params.id]);
       res.json({ success: true });
@@ -297,7 +356,7 @@ async function startServer() {
     const [rows] = await db.query("SELECT * FROM bloques_horarios ORDER BY hora_inicio ASC");
     res.json(rows);
   });
-  app.post("/api/bloques", async (req: Request, res: Response) => {
+  app.post("/api/bloques", authenticateToken, isAdmin, async (req: Request, res: Response) => {
     try {
       const { hora_inicio, hora_fin } = req.body;
       const [info] = await db.query<ResultSetHeader>("INSERT INTO bloques_horarios (hora_inicio, hora_fin) VALUES (?, ?)", [hora_inicio, hora_fin]);
@@ -306,7 +365,7 @@ async function startServer() {
       res.status(500).json({ error: "Error al crear bloque" });
     }
   });
-  app.put("/api/bloques/:id", async (req: Request, res: Response) => {
+  app.put("/api/bloques/:id", authenticateToken, isAdmin, async (req: Request, res: Response) => {
     try {
       const { hora_inicio, hora_fin } = req.body;
       await db.query("UPDATE bloques_horarios SET hora_inicio = ?, hora_fin = ? WHERE id = ?", [hora_inicio, hora_fin, req.params.id]);
@@ -315,7 +374,7 @@ async function startServer() {
       res.status(500).json({ error: "Error al actualizar bloque" });
     }
   });
-  app.delete("/api/bloques/:id", async (req: Request, res: Response) => {
+  app.delete("/api/bloques/:id", authenticateToken, isAdmin, async (req: Request, res: Response) => {
     try {
       await db.query("DELETE FROM bloques_horarios WHERE id = ?", [req.params.id]);
       res.json({ success: true });
@@ -325,7 +384,7 @@ async function startServer() {
   });
 
   // Import Excel
-  app.post("/api/import", upload.single("file"), async (req: Request, res: Response): Promise<any> => {
+  app.post("/api/import", authenticateToken, isAdmin, upload.single("file"), async (req: Request, res: Response): Promise<any> => {
     if (!req.file) return res.status(400).json({ error: "No file uploaded" });
 
     const connection = await db.getConnection();
@@ -589,15 +648,20 @@ async function startServer() {
     }
   });
 
-  // Vite middleware for development
-  if (process.env.NODE_ENV !== "production") {
+  // Production serving
+  if (process.env.NODE_ENV === "production") {
+    const __dirname = path.resolve();
+    app.use(express.static(path.join(__dirname, "dist")));
+    app.get("*", (req, res) => {
+      res.sendFile(path.join(__dirname, "dist", "index.html"));
+    });
+  } else {
+    // Vite middleware for development
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
     });
     app.use(vite.middlewares);
-  } else {
-    app.use(express.static("dist"));
   }
 
   app.listen(PORT, () => {

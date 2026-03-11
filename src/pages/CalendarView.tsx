@@ -18,8 +18,9 @@ interface CalendarViewProps {
   setFilterProfesor: (id: string) => void;
   filterSala: string;
   setFilterSala: (id: string) => void;
-  onEdit: (horario: Horario) => void;
-  onDelete: (id: number) => void;
+  onEdit?: (horario: Horario) => void;
+  onDelete?: (id: number) => void;
+  user: { usuario: string, role: string } | null;
 }
 
 export function CalendarView({
@@ -27,7 +28,7 @@ export function CalendarView({
   filterCurso, setFilterCurso,
   filterProfesor, setFilterProfesor,
   filterSala, setFilterSala,
-  onEdit, onDelete
+  onEdit, onDelete, user
 }: CalendarViewProps) {
 
   const exportToExcel = () => {
@@ -231,7 +232,11 @@ export function CalendarView({
                 {classesForDay.sort((a,b) => a.hora_inicio.localeCompare(b.hora_inicio)).map(clase => {
                   const colors = getProfessorColor(clase.profesor_id);
                   return (
-                    <div key={clase.id} className={`p-4 rounded-2xl border ${colors.border} ${colors.bg} shadow-sm active:scale-[0.98] transition-all`} onClick={() => onEdit(clase)}>
+                    <div 
+                      key={clase.id} 
+                      className={`p-4 rounded-2xl border ${colors.border} ${colors.bg} shadow-sm active:scale-[0.98] transition-all ${user ? 'cursor-pointer' : ''}`} 
+                      onClick={() => user && onEdit && onEdit(clase)}
+                    >
                       <div className="flex justify-between items-start mb-1">
                         <div className={`font-bold ${colors.text} text-lg leading-tight`}>{clase.asignatura_nombre}</div>
                         <div className={`text-[10px] font-black ${colors.text} px-2 py-0.5 rounded-full bg-white/40 ring-1 ring-black/5`}>
@@ -289,14 +294,16 @@ export function CalendarView({
                           return (
                             <div 
                               key={clase.id} 
-                              onClick={() => onEdit(clase)}
-                              className={`flex-1 ${colors.bg} border ${colors.border} rounded-xl p-3 relative group/card cursor-pointer hover:shadow-lg hover:-translate-y-0.5 transition-all active:scale-[0.97]`}
+                              onClick={() => user && onEdit && onEdit(clase)}
+                              className={`flex-1 ${colors.bg} border ${colors.border} rounded-xl p-3 relative group/card ${user ? 'cursor-pointer hover:shadow-lg hover:-translate-y-0.5' : 'cursor-default'} transition-all active:scale-[0.97]`}
                             >
-                              <div className="absolute top-2 right-2 flex opacity-0 group-hover/card:opacity-100 transition-opacity">
-                                <button className="text-gray-400 hover:text-rose-500 p-1 bg-white/80 rounded-lg backdrop-blur-sm" onClick={(e) => { e.stopPropagation(); onDelete(clase.id); }}>
-                                  <Trash2 size={12} />
-                                </button>
-                              </div>
+                              {user && (
+                                <div className="absolute top-2 right-2 flex opacity-0 group-hover/card:opacity-100 transition-opacity">
+                                  <button className="text-gray-400 hover:text-rose-500 p-1 bg-white/80 rounded-lg backdrop-blur-sm" onClick={(e) => { e.stopPropagation(); onDelete && onDelete(clase.id); }}>
+                                    <Trash2 size={12} />
+                                  </button>
+                                </div>
+                              )}
                               <div className={`font-black ${colors.text} text-[10px] uppercase leading-tight tracking-tight mb-1 line-clamp-2`}>
                                 {clase.asignatura_nombre}
                               </div>

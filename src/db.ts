@@ -94,6 +94,15 @@ async function initDB() {
       )
     `);
 
+    await db.query(`
+      CREATE TABLE IF NOT EXISTS usuarios (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        usuario VARCHAR(50) NOT NULL UNIQUE,
+        password VARCHAR(255) NOT NULL,
+        role ENUM('admin', 'editor') DEFAULT 'editor'
+      )
+    `);
+
     // Seed initial data if empty
     const [carrerasRows]: any = await db.query("SELECT COUNT(*) as count FROM carreras");
     if (carrerasRows[0].count === 0) {
@@ -121,6 +130,15 @@ async function initDB() {
         INSERT INTO horarios (curso_id, asignatura_id, profesor_id, sala_id, dia_semana, bloque_id)
         VALUES (1, 1, 1, 1, 'Lunes', 5)
       `);
+    }
+
+    // Seed default admin if missing
+    const [userRows]: any = await db.query("SELECT COUNT(*) as count FROM usuarios");
+    if (userRows[0].count === 0) {
+      // For simplicity in this demo, we use a simple password. 
+      // In a real production app, we would use bcrypt.
+      await db.query("INSERT INTO usuarios (usuario, password, role) VALUES (?, ?, ?)", ['admin', 'admin123', 'admin']);
+      console.log("Default admin user created: admin / admin123");
     }
     console.log("Database initialized successfully");
   } catch (error) {

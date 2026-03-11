@@ -11,10 +11,14 @@ import { ImporterView } from './pages/ImporterView';
 import { ManageData } from './pages/ManageData';
 import { EditorForm } from './pages/EditorForm';
 import { ConfirmDialog } from './components/ui/ConfirmDialog';
+import { Login } from './components/Login';
+import { LogIn, LogOut, User as UserIcon } from 'lucide-react';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('dashboard');
+  const [activeTab, setActiveTab] = useState('calendar');
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [user, setUser] = useState<{ usuario: string, role: string } | null>(null);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [cursos, setCursos] = useState<Curso[]>([]);
   const [profesores, setProfesores] = useState<Profesor[]>([]);
   const [asignaturas, setAsignaturas] = useState<Asignatura[]>([]);
@@ -60,9 +64,31 @@ function App() {
     }
   };
 
+  const checkAuth = async () => {
+    try {
+      const res = await window.fetch('/api/auth/me');
+      const data = await res.json();
+      if (data.user) setUser(data.user);
+    } catch (err) {
+      console.error('Auth check failed:', err);
+    }
+  };
+
   useEffect(() => {
     fetchData();
+    checkAuth();
   }, []);
+
+  const handleLogout = async () => {
+    try {
+      await window.fetch('/api/auth/logout', { method: 'POST' });
+      setUser(null);
+      setActiveTab('calendar');
+      toast.info('Sesión cerrada');
+    } catch (err) {
+      toast.error('Error al cerrar sesión');
+    }
+  };
 
   const openDeleteDialog = (type: string, id: number | string, name: string) => {
     setDialogConfig({
@@ -173,11 +199,11 @@ function App() {
 
         <nav className="flex-1 py-6 px-4 space-y-1.5 overflow-y-auto w-full">
           {[
-            { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-            { id: 'calendar', label: 'Horarios', icon: Calendar },
-            { id: 'importer', label: 'Importador (Excel)', icon: UploadIcon },
-            { id: 'data', label: 'Base de Datos', icon: Database },
-          ].map(item => (
+            { id: 'calendar', label: 'Horarios', icon: Calendar, public: true },
+            { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard, public: false },
+            { id: 'importer', label: 'Importador (Excel)', icon: UploadIcon, public: false },
+            { id: 'data', label: 'Base de Datos', icon: Database, public: false, adminOnly: true },
+          ].filter(item => item.public || (user && (!item.adminOnly || user.role === 'admin'))).map(item => (
             <button
               key={item.id}
               onClick={() => { setActiveTab(item.id); setIsEditing(false); }}
@@ -197,26 +223,51 @@ function App() {
             </button>
           ))}
 
-          <div className="pt-6 mt-6 border-t border-gray-100">
-            <button
-              onClick={() => { fetchData(); setIsEditing(true); setEditingData(null); }}
-              className={'w-full flex items-center justify-center space-x-2 px-4 py-3 rounded-xl transition-all duration-200 font-semibold ' +
-                (isEditing && !editingData ? 'bg-indigo-600 text-white shadow-md' : 'bg-gray-900 text-white hover:bg-gray-800 hover:shadow-md')}
-            >
-              <Plus size={20} />
-              <span>Programar Clase</span>
-            </button>
-          </div>
+          {user && (
+            <div className="pt-6 mt-6 border-t border-gray-100">
+              <button
+                onClick={() => { fetchData(); setIsEditing(true); setEditingData(null); }}
+                className={'w-full flex items-center justify-center space-x-2 px-4 py-3 rounded-xl transition-all duration-200 font-semibold ' +
+                  (isEditing && !editingData ? 'bg-indigo-600 text-white shadow-md' : 'bg-gray-900 text-white hover:bg-gray-800 hover:shadow-md')}
+              >
+                <Plus size={20} />
+                <span>Programar Clase</span>
+              </button>
+            </div>
+          )}
         </nav>
       </div>
 
       {/* Main Content Area */}
       <div className="flex-1 overflow-auto flex flex-col w-full">
         <header className="h-20 bg-white border-b border-gray-200 flex items-center justify-end px-8 shrink-0">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center border-2 border-white shadow-sm">
-              <span className="text-indigo-700 font-bold text-sm">AD</span>
-            </div>
+          <div className="flex items-center space-x-4">
+            {user ? (
+              <div className="flex items-center space-x-4">
+                <div className="text-right hidden sm:block">
+                  <p className="text-sm font-bold text-gray-900">{user.usuario}</p>
+                  <p className="text-xs text-indigo-600 font-medium uppercase tracking-wider">{user.role}</p>
+                </div>
+                <div className="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center border border-indigo-100">
+                  <UserIcon className="text-indigo-600" size={20} />
+                </div>
+                <button 
+                  onClick={handleLogout}
+                  className="p-2.5 text-gray-400 hover:text-rose-600 hover:bg-rose-50 rounded-xl transition-all"
+                  title="Cerrar Sesión"
+                >
+                  <LogOut size={20} />
+                </button>
+              </div>
+            ) : (
+              <button 
+                onClick={() => setIsLoginOpen(true)}
+                className="flex items-center space-x-2 px-5 py-2.5 bg-indigo-600 text-white rounded-xl font-bold text-sm shadow-lg shadow-indigo-100 hover:bg-indigo-700 hover:shadow-indigo-200 active:scale-95 transition-all"
+              >
+                <LogIn size={18} />
+                <span>Acceso Institucional</span>
+              </button>
+            )}
           </div>
         </header>
 
@@ -240,15 +291,16 @@ function App() {
               ) : (
                 <>
                   {activeTab === 'dashboard' && <Dashboard stats={getStats()} onAction={handleDashboardAction} />}
-                  {activeTab === 'calendar' && (
+                   {activeTab === 'calendar' && (
                     <CalendarView
                       cursos={cursos} profesores={profesores} salas={salas}
                       bloques={bloques} horarios={filteredHorarios}
                       filterCurso={filterCurso} setFilterCurso={setFilterCurso}
                       filterProfesor={filterProfesor} setFilterProfesor={setFilterProfesor}
                       filterSala={filterSala} setFilterSala={setFilterSala}
-                      onEdit={(clase) => { setEditingData(clase); setIsEditing(true); }}
-                      onDelete={(id) => openDeleteHorarioDialog(id)}
+                      onEdit={user ? (clase) => { setEditingData(clase); setIsEditing(true); } : undefined}
+                      onDelete={user ? (id) => openDeleteHorarioDialog(id) : undefined}
+                      user={user}
                     />
                   )}
                   {activeTab === 'importer' && <ImporterView onSuccess={fetchData} />}
@@ -270,6 +322,13 @@ function App() {
           <p>© 2026 Andrés Landa Figueroa - AcademiaSync | Todos los derechos reservados</p>
         </footer>
       </div>
+
+      {isLoginOpen && (
+        <Login 
+          onLogin={(u) => { setUser(u); setIsLoginOpen(false); }} 
+          onCancel={() => setIsLoginOpen(false)} 
+        />
+      )}
     </div>
   );
 }
